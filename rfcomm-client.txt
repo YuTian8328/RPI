@@ -1,0 +1,32 @@
+﻿import bluetooth
+import pickle
+import numpy as np
+
+bd_addr = "E4:5F:01:BF:02:4F"
+
+port = 1
+
+
+sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+print("Connecting to the server...")
+sock.connect((bd_addr, port))
+
+print("The connection has been established successfully.")
+
+# creat array to send to server
+arr = np.array([[1,2],[3,4]])
+
+# convert array to bytes to be possible to send it
+arr_byte = pickle.dumps(arr)
+sock.send(arr_byte)
+print("The array\n{}\nhas been sent successfully.".format(arr))
+
+# receive data echoed from server
+data = sock.recv(4096)
+
+# convert data back to int
+data_arr = pickle.loads(data)
+print("The array\n{}\nhas been echoed from the server back to the client.".format(data_arr))
+
+print("The connection has been closed.")
+sock.close()
