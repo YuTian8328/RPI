@@ -9,3 +9,11 @@
 >Critical content demanding immediate user attention due to potential risks.
 
 - For more detailed desciptions which you don't want to show by default you might find this useful (please try it out):
+
+  <details>
+  <summary>
+  Short summary
+  </summary>
+  Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+
+  </details>
