@@ -1,10 +1,11 @@
 # RPI
+## note
 >[!NOTE]
 >Highlights information that users should take into account, even when skimming.
-
+## highlight
 >[!IMPORTANT]
 >Crucial information necessary for user to succeed.
-
+###warning
 >[!WARNING]
 >Critical content demanding immediate user attention due to potential risks.
 
